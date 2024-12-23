@@ -2,7 +2,13 @@
   "כיתה ז": [
     { "file": "topic1.tex", "title": "מבוא לכל הנושאים" },
     { "file": "topic2.tex", "title": "משתנים וביטויים אלגבריים" },
-    { "file": "topic3.tex", "title": "פעולות חשבון וחזקות" }
+    { "file": "topic3.tex", "title": "פעולות חשבון וחזקות" },
+    { "file": "topic4.tex", "title": "שברים ומספרים עשרוניים" },
+    { "file": "topic5.tex", "title": "משוואות בנעלם אחד" },
+    { "file": "topic6.tex", "title": "מספרים חיוביים ושליליים"},
+    { "file": "topic7.tex", "title": "מבוא לגיאומטריה בסיסית" },
+    { "file": "topic8.tex", "title":  "נפחים של תיבות"},
+    { "file": "topic9.tex", "title":  "פונקציות בסיסיות"}
   ],
   "כיתה ח": [
     { "file": "topic1.tex", "title": "משוואות עם נעלם אחד" },
