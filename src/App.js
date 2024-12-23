@@ -93,9 +93,29 @@ function App() {
       />
 
       {/* Footer */}
-      <footer className="footer">
-        <p>© Koren Ben Ezra 2025</p>
-      </footer>
+      <footer class="site-footer">
+      <div class="footer-content">
+        <a 
+          href="https://www.linkedin.com/in/koren-ben-ezra" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="linkedin-link"
+          title="Connect with Koren Ben Ezra on LinkedIn"
+        >
+          <img 
+            src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" 
+            alt="LinkedIn Logo" 
+            class="linkedin-icon"
+          />
+          <span class="linkedin-text"> Koren Ben Ezra</span>
+        </a>
+      </div>
+    </footer>
+
+
+
+
+
     </div>
   );
 }

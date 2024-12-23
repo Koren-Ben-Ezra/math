@@ -1,42 +1,50 @@
 .navbar {
-    /* You can keep direction: ltr on the container or set it to rtl,
-       but the UL will be flex row-reverse below. */
-    background-color: #333; 
-    color: #fff;
-    padding: 0.5rem 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .topics-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  
-    /* Show items right-to-left. The first array element is on the far right. */
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 1rem;
-  
-    /* Align the entire row of buttons to the right edge */
-    justify-content: flex-end;
-  }
-  
-  .topics-list li {
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    background-color: #444;  /* dark gray or any color you prefer */
-    color: #fff;
-    transition: background-color 0.2s;
-  }
-  
-  .topics-list li:hover {
-    background-color: #555;
-  }
-  
-  .topics-list li.active {
-    background-color: #999;
-    color: #000;
-    font-weight: bold;
-  }
-  
+  background: linear-gradient(90deg, #6a11cb, #2575fc); /* Gradient background */
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.topics-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  /* Enable wrapping for items if they don't fit in one row */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse; /* Maintain right-to-left order */
+  gap: 0.5rem 1rem; /* Adjusted gap for spacing */
+
+  /* Align items to the right edge */
+  justify-content: flex-start;
+}
+
+.topics-list li {
+  cursor: pointer;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px; /* Rounded buttons */
+  background: linear-gradient(145deg, #444, #555); /* Subtle gradient for buttons */
+  color: #fff;
+  font-size: 1rem; /* Slightly larger text */
+  font-weight: 500; /* Medium weight for emphasis */
+  transition: all 0.3s ease; /* Smooth transition */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(255, 255, 255, 0.1); /* 3D effect */
+}
+
+.topics-list li:hover {
+  background: linear-gradient(145deg, #555, #666); /* Lighter gradient on hover */
+  transform: translateY(-3px); /* Lift effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+}
+
+.topics-list li.active {
+  background: #f1c40f; /* Highlighted color for active item */
+  color: #000;
+  font-weight: bold;
+  transform: scale(1.1); /* Slightly larger active item */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Glow for the active button */
+}
+
