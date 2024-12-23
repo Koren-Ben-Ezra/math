@@ -1,8 +1,8 @@
 {
-  "name": "math-website",
+  "name": "math",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://koren-ben-ezra.github.io/math-website",
+  "homepage": "https://koren-ben-ezra.github.io/math",
   "dependencies": {
     "katex": "^0.16.18",
     "marked": "^15.0.4",
