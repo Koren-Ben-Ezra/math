@@ -1,0 +1,239 @@
+/* 0. Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background: #FFF9C4; /* Light pastel yellow */
+}
+
+/* 1. Root container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* 2. Header (title + grade selector + hamburger) */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #E3F2FD; /* Light sky blue */
+  color: #0D47A1; /* Deep navy for text */
+  padding: 1rem;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add depth */
+}
+
+.site-title {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 1rem 0 0;
+  color: #FF7043; /* Vibrant orange for the title */
+}
+
+/* Grade selector inside the header */
+.grade-selector {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.grade-label {
+  margin-right: 0.5rem;
+  font-weight: bold;
+  color: #FF7043; /* Match the title accent color */
+}
+
+#gradeDropdown {
+  background: #FFEBEE; /* Light pink */
+  border: 2px solid #FF8A80; /* Bright coral */
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+/* Hamburger button (hidden on desktop) */
+.hamburger-button {
+  display: none;
+  position: absolute;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #FF7043; /* Match orange accent */
+  cursor: pointer;
+}
+
+/* 3. Mobile menu area for topics */
+.mobile-menu.closed {
+  display: none;
+}
+
+.mobile-menu.open {
+  display: block;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  background: #FFF; /* Clean white background */
+  z-index: 999;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+/* 4. Navbar */
+.navbar {
+  width: 100%;
+  background: linear-gradient(to right, #81C784, #64B5F6); /* Green to blue gradient */
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+  margin-left: auto;
+  display: flex;
+  list-style-type: none;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  gap: 1rem;
+}
+
+.navbar li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.navbar li:hover {
+  background-color: #FF8A80; /* Bright coral hover */
+  transform: scale(1.05); /* Subtle zoom */
+}
+
+.navbar li.active {
+  background-color: #FF7043; /* Vibrant orange */
+  color: #FFF; /* Contrast for active item */
+  font-weight: bold;
+}
+
+/* 5. Topic Viewer */
+.topic-viewer {
+  direction: rtl;
+  text-align: right;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  background: #FFF;
+  border: 1px solid #DDD;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.topic-viewer-wrapper h1 {
+  text-align: center;
+  margin: 1rem auto;
+  font-weight: bold;
+  color: #FF7043; /* Vibrant orange for titles */
+}
+
+/* KaTeX formulas */
+.topic-viewer .katex,
+.topic-viewer .katex-display,
+.topic-viewer .katex-html {
+  direction: ltr !important;
+  unicode-bidi: bidi-override;
+  text-align: center !important;
+}
+
+/* Bullet lists */
+.topic-viewer ul,
+.topic-viewer ol {
+  margin-right: 2rem;
+  padding-right: 1rem;
+}
+
+/* 6. Footer */
+.footer {
+  background: #64B5F6; /* Soft blue */
+  color: #FFF;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* 7. MEDIA QUERIES */
+@media (max-width: 767px) {
+  .hamburger-button {
+    display: block;
+  }
+
+  .header {
+    justify-content: center;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  /* Mobile menu area for topics */
+  .mobile-menu.closed {
+    display: none;
+  }
+  .mobile-menu.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #FFF;
+    z-index: 999;
+    border-top: 1px solid #CCC;
+    padding: 1rem 0;
+  }
+
+  /* Navbar styles for mobile */
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+  }
+
+  .navbar li {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    width: 90%;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+}
+
+@media (min-width: 768px) {
+  .hamburger-button {
+    display: none;
+  }
+
+  .mobile-menu.closed {
+    display: flex !important;
+  }
+
+  .mobile-menu {
+    display: flex;
+    position: static;
+    background: none;
+  }
+}
