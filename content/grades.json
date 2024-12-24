@@ -11,9 +11,8 @@
     { "file": "topic9.tex", "title":  "פונקציות בסיסיות"}
   ],
   "כיתה ח": [
-    { "file": "topic1.tex", "title": "משוואות עם נעלם אחד" },
-    { "file": "topic2.tex", "title": "משוואות ושאלות מילוליות" },
-    { "file": "topic3.tex", "title": "משוואות עם נעלם אחד" }
-    
+    { "file": "topic1.tex", "title": "" },
+    { "file": "topic2.tex", "title": "" },
+    { "file": "topic3.tex", "title": "" }
   ]
 }
