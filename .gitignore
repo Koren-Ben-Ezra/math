@@ -8,8 +8,6 @@
 # testing
 /coverage
 
-.build
-/.build
 /build
 
 # misc
