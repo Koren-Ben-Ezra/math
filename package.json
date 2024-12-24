@@ -1,8 +1,8 @@
 {
   "name": "math",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
-  "homepage": "https://koren-ben-ezra.github.io/math",
+  "homepage": "https://koren-ben-ezra.github.io/math/",
   "dependencies": {
     "katex": "^0.16.18",
     "marked": "^15.0.4",
@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts build",
+    "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",

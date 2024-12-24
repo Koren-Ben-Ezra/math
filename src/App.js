@@ -88,7 +88,6 @@ function App() {
 
       {/* Main content viewer */}
       <TopicViewer
-        key={`${selectedGrade}-${selectedTopic.file}`}
         grade={selectedGrade}
         topicFile={selectedTopic.file}
       />
